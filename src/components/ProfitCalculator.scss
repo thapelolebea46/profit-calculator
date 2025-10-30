@@ -1,0 +1,178 @@
+.profit-calculator {
+  background: #e6f1ff;
+  color: #0b1f3a;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    color: #082b61;
+    margin-bottom: 1rem;
+  }
+
+  .empty {
+    color: #777;
+    margin: 1rem 0;
+  }
+
+  .items-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 1rem auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    th,
+    td {
+      padding: 0.8rem;
+      border-bottom: 1px solid #dce7ff;
+    }
+
+    th {
+      background: #0b1f3a;
+      color: #fff;
+    }
+
+    tr:nth-child(even) {
+      background: #f4f9ff;
+    }
+  }
+
+  .buttons {
+    margin-top: 1.5rem;
+
+    .add-btn,
+    .calc-btn {
+      background-color: #0b1f3a;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      margin: 0.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #14488a;
+      }
+    }
+  }
+
+  .loading-section {
+    margin-top: 2rem;
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #cfe2ff;
+      border-top-color: #0b1f3a;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 1s linear infinite;
+    }
+
+    .calculating {
+      font-weight: bold;
+      color: #0b1f3a;
+      font-size: 1.1rem;
+
+      .dots {
+        display: inline-block;
+        animation: dots 1.2s infinite;
+      }
+    }
+  }
+
+  .results {
+    background: #0b1f3a;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    width: fit-content;
+    margin-inline: auto;
+
+    .profit-positive {
+      color: #46e364;
+    }
+
+    .profit-negative {
+      color: #ff4e4e;
+    }
+  }
+
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      text-align: left;
+
+      input {
+        display: block;
+        width: 100%;
+        margin: 0.7rem 0;
+        padding: 0.6rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      .submit-btn,
+      .close-btn {
+        display: inline-block;
+        margin-top: 1rem;
+        background: #0b1f3a;
+        color: #fff;
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+          background: #14488a;
+        }
+      }
+
+      .close-btn {
+        background: #999;
+        margin-left: 0.5rem;
+
+        &:hover {
+          background: #777;
+        }
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    content: ".";
+  }
+  40% {
+    content: "..";
+  }
+  60%,
+  100% {
+    content: "...";
+  }
+}

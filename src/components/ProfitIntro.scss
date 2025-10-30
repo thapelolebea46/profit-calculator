@@ -1,0 +1,65 @@
+// Theme colors
+$dark-blue: #0b1f3a;
+$light-blue: #d8ecff;
+$accent-blue: #1e90ff;
+
+body {
+  background-color: $light-blue;
+}
+
+.profit-intro {
+  background-color: $dark-blue;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+
+  &__title {
+    color: $accent-blue;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #e2eaff;
+  }
+
+  &__steps {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 1.5rem auto;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      font-size: 1rem;
+      color: #e2eaff;
+
+      &::before {
+        content: "💠";
+        position: absolute;
+        left: 0;
+        color: $accent-blue;
+      }
+
+      strong {
+        color: $accent-blue;
+      }
+    }
+  }
+}

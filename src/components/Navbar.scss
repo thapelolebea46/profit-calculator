@@ -1,0 +1,25 @@
+.navbar {
+  position: fixed; // fixed at top
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0b1f3a;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center; // centers the link horizontally
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #14488a;
+  }
+}

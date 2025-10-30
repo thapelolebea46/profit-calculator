@@ -1,0 +1,84 @@
+.export-pdf-container {
+  text-align: center;
+  margin-top: 20px;
+
+  .business-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border 0.2s ease;
+
+    &:focus {
+      border-color: #0b1f3a;
+      outline: none;
+    }
+  }
+
+  .char-counter {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 5px;
+
+    &.warning {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+  }
+
+  .download-btn {
+    margin-top: 10px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #0b1f3a;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #14488a;
+    }
+
+    &:disabled {
+      background-color: #888;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    &.shake {
+      animation: shake 0.3s;
+    }
+  }
+
+  .warning-text {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-5px);
+    }
+    40% {
+      transform: translateX(5px);
+    }
+    60% {
+      transform: translateX(-5px);
+    }
+    80% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
