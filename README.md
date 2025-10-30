@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Profit Calculator Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This web application was developed to provide a **simple and efficient way for small business owners to calculate potential profits** on a variety of products. The app allows users to:
 
-In the project directory, you can run:
+- Enter the **business name**.
+- Add multiple items with their **buy price, sell price, and quantity**.
+- Generate a **detailed PDF report** showing:
 
-### `npm start`
+  - Item name
+  - Buy price
+  - Sell price
+  - Quantity
+  - Total expenditure
+  - Profit per item
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- View **overall totals**, including total spending and total profit.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app is especially useful for businesses dealing with **diverse inventory**, such as perfumes (men’s and women’s), makeup, and accessories like sunglasses, where prices and quantities can vary widely. It helps business owners quickly understand their potential gains and make informed decisions.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- **Dynamic item management**: Add multiple items with relevant details.
+- **PDF generation**: Automatically create a professional PDF report summarizing all items and profits.
+- **User-friendly interface**: Clean, intuitive design with input validation.
+- **Responsive UI**: Works well on both desktop and mobile devices.
+- **Interactive feedback**: Includes visual cues like character counters and button animations.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React.js
+- **Styling**: SCSS (Sass)
+- **PDF Generation**: jsPDF (manual table generation)
+- **State Management**: React Hooks (`useState`)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## How It Works
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. The user enters their **business name**.
+2. Items are added via a form with **name, buy price, sell price, and quantity**.
+3. Once all items are added, the user can click **“Download PDF”**.
+4. The app generates a **PDF report** with the itemized table and totals.
+5. The report can be saved or shared for record-keeping or business planning.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation & Setup
 
-## Learn More
+1. Clone the repository:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Install dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+```
 
-### Code Splitting
+3. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm start
+```
 
-### Analyzing the Bundle Size
+4. Open your browser at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Enter your **business name** in the input field.
+2. Click **“Add Item”** to input product details.
+3. Repeat for all items in your inventory.
+4. Click **“Download PDF”** to generate the report.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
